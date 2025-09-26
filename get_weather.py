@@ -2,6 +2,7 @@ import os
 import requests
 import google.generativeai as genai
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 from dotenv import load_dotenv
 import datetime
 
@@ -129,7 +130,7 @@ app = Flask(
     template_folder='aura',
     static_url_path=''  # allow "/styles.css" and "/app.js" paths to work
 )
-
+CORS(app)
 # Configure the Gemini API
 try:
     genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
