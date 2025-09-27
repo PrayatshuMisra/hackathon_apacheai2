@@ -799,7 +799,7 @@ function setupPirepConversion() {
     pirepOutput.textContent = '';
 
     try {
-      const response = await fetch(window.location.origin+'/api/convert-to-pirep', {
+      const response = await fetch('/api/convert-to-pirep', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1955,7 +1955,7 @@ async function analyzeAndSuggestRoutes() {
       codes: alternativeRouteIcaos.join(','),
       include_notams: 'false' // Simplified for comparison
     });
-    const resp = await fetch(window.location.origin+'/briefing?${params.toString()}');
+    const resp = await fetch(`/briefing?${params.toString()}`);
     if (!resp.ok) throw new Error('Failed to fetch alternative briefing');
     const altData = await resp.json();
 
