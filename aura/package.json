@@ -1,0 +1,18 @@
+{
+  "name": "aura",
+  "version": "1.0.0",
+  "description": "A minimal, modern SPA demo built without a build step. Uses Tailwind via CDN and vanilla JS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13"
+  }
+}
